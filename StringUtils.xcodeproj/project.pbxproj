@@ -15,7 +15,7 @@
 		9B09ACC71C9A80D000E6B065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B09ACC51C9A80D000E6B065 /* LaunchScreen.storyboard */; };
 		9B09ACD21C9A80D000E6B065 /* StringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B09ACD11C9A80D000E6B065 /* StringUtilsTests.m */; };
 		9B09ACDD1C9A80D000E6B065 /* StringUtilsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B09ACDC1C9A80D000E6B065 /* StringUtilsUITests.m */; };
-		9B09ACEC1C9A80E900E6B065 /* WLStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B09ACEB1C9A80E900E6B065 /* WLStringUtils.m */; };
+		9B524DCD1D4862EC0025B80F /* WLStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B524DCC1D4862EC0025B80F /* WLStringUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		9B09ACD81C9A80D000E6B065 /* StringUtilsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringUtilsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B09ACDC1C9A80D000E6B065 /* StringUtilsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringUtilsUITests.m; sourceTree = "<group>"; };
 		9B09ACDE1C9A80D000E6B065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B09ACEA1C9A80E900E6B065 /* WLStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLStringUtils.h; sourceTree = "<group>"; };
-		9B09ACEB1C9A80E900E6B065 /* WLStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLStringUtils.m; sourceTree = "<group>"; };
+		9B524DCB1D4862EC0025B80F /* WLStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLStringUtils.h; sourceTree = "<group>"; };
+		9B524DCC1D4862EC0025B80F /* WLStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLStringUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		9B09ACB61C9A80D000E6B065 /* StringUtils */ = {
 			isa = PBXGroup;
 			children = (
-				9B09ACEA1C9A80E900E6B065 /* WLStringUtils.h */,
-				9B09ACEB1C9A80E900E6B065 /* WLStringUtils.m */,
+				9B524DCB1D4862EC0025B80F /* WLStringUtils.h */,
+				9B524DCC1D4862EC0025B80F /* WLStringUtils.m */,
 				9B09ACBA1C9A80D000E6B065 /* AppDelegate.h */,
 				9B09ACBB1C9A80D000E6B065 /* AppDelegate.m */,
 				9B09ACBD1C9A80D000E6B065 /* ViewController.h */,
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B09ACBF1C9A80D000E6B065 /* ViewController.m in Sources */,
-				9B09ACEC1C9A80E900E6B065 /* WLStringUtils.m in Sources */,
+				9B524DCD1D4862EC0025B80F /* WLStringUtils.m in Sources */,
 				9B09ACBC1C9A80D000E6B065 /* AppDelegate.m in Sources */,
 				9B09ACB91C9A80D000E6B065 /* main.m in Sources */,
 			);
@@ -504,6 +504,7 @@
 				9B09ACE31C9A80D000E6B065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B09ACE41C9A80D000E6B065 /* Build configuration list for PBXNativeTarget "StringUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +513,7 @@
 				9B09ACE61C9A80D000E6B065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B09ACE71C9A80D000E6B065 /* Build configuration list for PBXNativeTarget "StringUtilsUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +522,7 @@
 				9B09ACE91C9A80D000E6B065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

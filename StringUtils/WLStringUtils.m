@@ -11,7 +11,7 @@
 @implementation WLStringUtils
 
 //将毫秒转换成指定格式的日期
-+ (NSString *)getStringFromMillisecond:(NSString *)milli andFormate:(NSString *)formate{
++ (NSString *)getStringFromMillisecond:(NSString *)milli withFormate:(NSString *)formate{
 
     //除去 milli 的前后空格
     milli=[milli stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -58,11 +58,25 @@
     UIFont *cuFont=[UIFont systemFontOfSize:font];
     
      // 构建字典
-    NSDictionary *attr=[NSDictionary dictionaryWithObjectsAndKeys:cuFont,NSFontAttributeName, nil];
+    NSDictionary *attr=[NSDictionary dictionaryWithObjectsAndKeys:NSFontAttributeName,cuFont, nil];
     
    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;
     
 }
+
+
+//根据文本内容和文本属性字典获取文本的空间大小
++ (CGSize) getStringSizeWith:(NSString *)text andTextAttributes:(NSDictionary *)attr{
+
+    if(text==nil || [text isEqualToString:@""]){
+        
+        return CGSizeZero;
+    }
+
+    return [text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesDeviceMetrics | NSStringDrawingTruncatesLastVisibleLine attributes:attr context:nil].size;
+}
+
+
 
 
 //判断一个字符串是否是整数
@@ -132,5 +146,32 @@
     
     return [cate evaluateWithObject:str];
 }
+
+//验证字符串是否是 IP 地址
++ (BOOL)isValidatIP:(NSString *)ipAddress {
+    
+    NSString  *urlRegEx =@"^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+    
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:urlRegEx options:0 error:&error];
+    
+    if (regex != nil) {
+        NSTextCheckingResult *firstMatch=[regex firstMatchInString:ipAddress options:0 range:NSMakeRange(0, [ipAddress length])];
+        
+        if (firstMatch) {
+            NSRange resultRange = [firstMatch rangeAtIndex:0];
+            NSString *result=[ipAddress substringWithRange:resultRange];
+            //输出结果
+            NSLog(@"%@",result);
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 
 @end
